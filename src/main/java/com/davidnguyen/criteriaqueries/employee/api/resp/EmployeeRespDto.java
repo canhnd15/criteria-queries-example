@@ -21,6 +21,7 @@ public class EmployeeRespDto {
         if(entity == null) return null;
 
         return EmployeeRespDto.builder()
+                .id(entity.getId())
                 .firstName(entity.getFirstName())
                 .lastName(entity.getLastName())
                 .fullName(String.join(" ", entity.getFirstName(), entity.getLastName()))
